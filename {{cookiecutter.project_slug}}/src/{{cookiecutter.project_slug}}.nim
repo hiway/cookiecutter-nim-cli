@@ -10,6 +10,10 @@ Options:
   --name=<name>     EXAMPLE: Your name [default: world]
 """
 import docopt
+include constants
+
+echo banner_txt
+echo "---"
 
 let args = docopt(doc, version = "{{cookiecutter.version}}")
 
