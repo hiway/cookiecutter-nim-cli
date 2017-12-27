@@ -10,10 +10,9 @@ Options:
   --name=<name>     EXAMPLE: Your name [default: world]
 """
 import docopt
-include constants
 
-echo banner_txt
-echo "---"
+# Uncomment the next line to include and show banner.txt
+# include banner
 
 let args = docopt(doc, version = "{{cookiecutter.version}}")
 
