@@ -28,9 +28,9 @@ suite "Test cli":
   test "Execute default":
     let cmd_out = runCli()
     check:
-      cmd_out.output.strip == default_output
+      cmd_out.output.strip.find(default_output) > 0
 
   test "Execute with --name":
     let cmd_out = runCli("--name=" & test_name)
     check:
-      cmd_out.output.strip == test_output
+      cmd_out.output.strip.find(test_output) > 0
